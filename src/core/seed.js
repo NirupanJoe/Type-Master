@@ -1,11 +1,10 @@
-import config from './config';
 import { rndString } from '@laufire/utils/random';
-
-const refreshIDLength = 4;
+import config from './config';
 
 const seed = {
-	count: config.countStart,
-	refreshID: rndString(refreshIDLength),
+	score: 0,
+	question: rndString(config.refreshIDLength),
+	answer: '',
 };
 
 export default seed;
