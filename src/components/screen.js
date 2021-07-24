@@ -5,7 +5,7 @@ import Input from './input';
 const Screen = () =>
 	<div className="container">
 		<div className="score">Score: {context.state.score}</div>
-		<div>{context.state.question}</div>
+		<div>Question: {context.state.question}</div>
 		<div>{Input()}</div>
 	</div>;
 
