@@ -1,11 +1,14 @@
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import './App.scss';
 import Screen from './components/screen';
+import ticker from './services/ticker';
 
-const App = () =>
-	<div className="App">
+const App = () => {
+	useEffect(ticker.state, []);
+
+	return <div className="App">
 		{Screen()}
-	</div>
-	;
+	</div>;
+};
 
 export default App;

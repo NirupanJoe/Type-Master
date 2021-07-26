@@ -11,11 +11,28 @@ const setInput = ({ state, data }) => {
 		question: update === 1
 			? rndString(config.refreshIDLength)
 			: state.question,
+		second: update === 1 ? 0 : state.second,
+	};
+};
+
+const setSecond = ({ state }) => ({
+	second: state.second + 1,
+});
+
+const setReset = ({ state }) => {
+	const update = InputManager.setReset(state.second);
+
+	return {
+		answer: update ? '' : state.answer,
+		question: update ? rndString(config.refreshIDLength) : state.question,
+		second: update ? 0 : state.second,
 	};
 };
 
 const actions = {
 	setInput,
+	setReset,
+	setSecond,
 };
 
 export default actions;
