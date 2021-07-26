@@ -6,6 +6,7 @@ const Input = () =>
 		className="input"
 		value={ context.state.answer }
 		placeholder="Answer"
+		maxLength="4"
 		onChange={ (evt) => {
 			// eslint-disable-next-line no-console
 			console.log(evt);
