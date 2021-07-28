@@ -2,6 +2,7 @@ import { React } from 'react';
 import context from '../core/context';
 import InputManager from '../services/inputManager';
 import Input from './input';
+import Second from './second';
 
 const Screen = () => {
 	const { question, highlight } = InputManager
@@ -9,11 +10,11 @@ const Screen = () => {
 
 	return <div className="container">
 		<div className="score">Score: {context.state.score}</div>
+		<div>{Second()}</div>
 		<div>Question:{}
 			<span className="highlight">{highlight}</span>
 			<span>{question}</span>
 		</div>
-		<div>second: {context.state.second}</div>
 		<div>{Input()}</div>
 	</div>;
 };
