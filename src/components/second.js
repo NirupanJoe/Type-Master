@@ -1,10 +1,10 @@
 import { React } from 'react';
 import context from '../core/context';
 
-const ThirtyTwo = 32;
+const value = -36;
 
 const style = () => ({
-	transform: `rotate(${ context.state.second * ThirtyTwo }deg)`,
+	transform: `rotate(${ context.state.second * value }deg)`,
 });
 
 const Second = () =>

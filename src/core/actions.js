@@ -16,7 +16,7 @@ const setInput = ({ state, data }) => {
 };
 
 const setSecond = ({ state }) => ({
-	second: state.second + 1,
+	second: state.second - 1,
 });
 
 const setReset = ({ state }) => {
@@ -25,7 +25,8 @@ const setReset = ({ state }) => {
 	return {
 		answer: update ? '' : state.answer,
 		question: update ? rndString(config.refreshIDLength) : state.question,
-		second: update ? 0 : state.second,
+		// eslint-disable-next-line no-magic-numbers
+		second: update ? 10 : state.second,
 	};
 };
 

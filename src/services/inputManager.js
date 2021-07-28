@@ -1,9 +1,7 @@
-const getSecond = 11;
-
 const checkInput = (question, answer) =>
 	(question === answer ? 1 : 0);
 
-const setReset = (second) => second === getSecond;
+const setReset = (second) => second === 0;
 
 const setHighlight = (que, ans) => {
 	const check = que.split('').findIndex((char, i) =>
