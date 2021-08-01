@@ -11,11 +11,11 @@ const Screen = () => {
 	return <div className="container">
 		<div className="score">Score: {context.state.score}</div>
 		<div>{Second()}</div>
-		<div>Question:{}
+		<div className="question">Question:{}
 			<span className="highlight">{highlight}</span>
 			<span>{question}</span>
 		</div>
-		<div>{Input()}</div>
+		<div id="input">{Input()}</div>
 	</div>;
 };
 
