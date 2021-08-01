@@ -9,7 +9,6 @@ const style = () => ({
 
 const Second = () =>
 	<div className="second-container">
-		<div className="second-digital">{context.state.second}</div>
 		<div className="second-circle">
 			<div style={ style() } className="second-line"/>
 		</div>
