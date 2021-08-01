@@ -6,12 +6,10 @@ const setInput = ({ state, data }) => {
 	const update = InputManager.checkInput(state.question, data);
 
 	return {
-		answer: update === 1 ? '' : data,
-		score: state.score + update,
-		question: update === 1
-			? rndString(config.refreshIDLength)
-			: state.question,
-		second: update === 1 ? 0 : state.second,
+		answer: update ? '' : data,
+		score: InputManager.addScore(state.score, update),
+		question: update ? rndString(config.refreshIDLength) : state.question,
+		second: update ? config.score : state.second,
 	};
 };
 
@@ -25,8 +23,7 @@ const setReset = ({ state }) => {
 	return {
 		answer: update ? '' : state.answer,
 		question: update ? rndString(config.refreshIDLength) : state.question,
-		// eslint-disable-next-line no-magic-numbers
-		second: update ? 10 : state.second,
+		second: update ? config.score : state.second,
 	};
 };
 

@@ -1,5 +1,6 @@
-const checkInput = (question, answer) =>
-	(question === answer ? 1 : 0);
+const checkInput = (question, answer) => question === answer;
+
+const addScore = (score, update) => (update ? score + 1 : score);
 
 const setReset = (second) => second === 0;
 
@@ -17,6 +18,7 @@ const InputManager = {
 	checkInput,
 	setReset,
 	setHighlight,
+	addScore,
 };
 
 export default InputManager;
