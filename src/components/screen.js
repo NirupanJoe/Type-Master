@@ -9,12 +9,12 @@ const Screen = () => {
 		.setHighlight(context.state.question, context.state.answer);
 
 	return <div className="container">
-		<div className="score">Score: {context.state.score}</div>
+		<h2 className="score">Score: {context.state.score}</h2>
 		<div>{Second()}</div>
-		<div className="question">Question:{}
+		<h1 className="question">Question:{}
 			<span className="highlight">{highlight}</span>
 			<span>{question}</span>
-		</div>
+		</h1>
 		<div id="input">{Input()}</div>
 	</div>;
 };
