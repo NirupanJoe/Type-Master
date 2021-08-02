@@ -1,4 +1,4 @@
-import { rndString } from '@laufire/utils/random';
+import faker from 'faker';
 import InputManager from '../services/inputManager';
 import config from './config';
 
@@ -7,7 +7,7 @@ const setInput = ({ state, data }) =>
 		? {
 			answer: '',
 			score: state.score + 1,
-			question: rndString(config.refreshIDLength),
+			question: faker.lorem.word(),
 			second: config.second,
 		}
 		: {
@@ -21,7 +21,7 @@ const setSecond = ({ state }) => ({
 const setReset = ({ state }) =>
 	InputManager.setReset(state.second) && {
 		answer: '',
-		question: rndString(config.refreshIDLength),
+		question: faker.lorem.word(),
 		second: config.second,
 	};
 

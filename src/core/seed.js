@@ -1,9 +1,9 @@
-import { rndString } from '@laufire/utils/random';
 import config from './config';
+import faker from 'faker';
 
 const seed = {
 	score: 0,
-	question: rndString(config.refreshIDLength),
+	question: faker.hacker.noun(),
 	answer: '',
 	second: config.second,
 };

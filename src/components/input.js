@@ -6,7 +6,7 @@ const Input = () =>
 		className="input"
 		value={ context.state.answer }
 		placeholder="Answer"
-		maxLength="4"
+		maxLength="12"
 		onChange={ (evt) => context.actions.setInput(evt.target.value) }
 	/>;
 
