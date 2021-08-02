@@ -5,7 +5,7 @@ const seed = {
 	score: 0,
 	question: rndString(config.refreshIDLength),
 	answer: '',
-	second: config.score,
+	second: config.second,
 };
 
 export default seed;
