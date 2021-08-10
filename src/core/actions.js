@@ -7,7 +7,7 @@ const setInput = ({ state, data }) =>
 		? {
 			answer: '',
 			score: state.score + 1,
-			question: faker.lorem.word(),
+			question: faker.lorem.word(config.questionLength),
 			second: config.second,
 		}
 		: {
@@ -21,7 +21,7 @@ const setSecond = ({ state }) => ({
 const setReset = ({ state }) =>
 	InputManager.setReset(state.second) && {
 		answer: '',
-		question: faker.lorem.word(),
+		question: faker.lorem.word(config.questionLength),
 		second: config.second,
 	};
 
