@@ -1,6 +1,8 @@
+import config from '../core/config';
+
 const checkInput = (question, answer) => question === answer;
 
-const setReset = (second) => second === 0;
+const setReset = (second) => second === config.resetQuestionSecond;
 
 const setHighlight = (que, ans) => {
 	const check = que.split('').findIndex((char, i) =>

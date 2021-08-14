@@ -4,6 +4,7 @@ const second = 1;
 const config = {
 	tickerDelay: millisecond * second,
 	second: 10,
+	resetQuestionSecond: 0,
 	questionLength: 6,
 };
 
